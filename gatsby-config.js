@@ -48,6 +48,6 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
         environment: process.env.CONTENTFUL_ENVIRONMENT || "master",
       },
-    },
+    }
   ],
 }
