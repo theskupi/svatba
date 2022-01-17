@@ -1,15 +1,14 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 import { Parallax } from "react-scroll-parallax"
+import Counter from "../components/Counter"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Counter />
 
     <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
       <div style={{ padding: "20px", border: "5px solid tomato" }}>test 1</div>
