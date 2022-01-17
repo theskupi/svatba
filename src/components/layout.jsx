@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-// import { WrapPageElement } from "../../gatsby-browser"
+import { WrapPageElement } from "../../gatsby-browser"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <WrapPageElement>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
-    </>
+    </WrapPageElement>
   )
 }
 

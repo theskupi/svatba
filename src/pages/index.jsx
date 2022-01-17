@@ -11,15 +11,15 @@ const IndexPage = () => (
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
 
-    {/* <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
+    <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
       <div style={{ padding: "20px", border: "5px solid tomato" }}>test 1</div>
     </Parallax>
-    <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
+    <Parallax className="custom-class" y={[-60, 60]} tagOuter="figure">
       <div style={{ padding: "20px", border: "5px solid purple" }}>test 2</div>
     </Parallax>
-    <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
+    <Parallax className="custom-class" y={[0, 0]} tagOuter="figure">
       <div style={{ padding: "20px", border: "5px solid violet" }}>test 3</div>
-    </Parallax> */}
+    </Parallax>
 
     <iframe
       title="formular"
