@@ -2,23 +2,27 @@ import * as React from "react"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import { Parallax } from "react-scroll-parallax"
 import Counter from "../components/Counter"
+import ParallaxSection from "../components/Parallax/ParallaxSection"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Svatba" />
     <Counter />
-
-    <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
-      <div style={{ padding: "20px", border: "5px solid tomato" }}>test 1</div>
-    </Parallax>
-    <Parallax className="custom-class" y={[-60, 60]} tagOuter="figure">
-      <div style={{ padding: "20px", border: "5px solid purple" }}>test 2</div>
-    </Parallax>
-    <Parallax className="custom-class" y={[0, 0]} tagOuter="figure">
-      <div style={{ padding: "20px", border: "5px solid violet" }}>test 3</div>
-    </Parallax>
+    <ParallaxSection
+      side="left"
+      year="2021"
+      text="9. ledna jsme se zasnoubili v zasněženém panorama Babího lomu kousek
+          od Brna. Tehdy v Brně žádný sníh nebyl a proto při příjezdu mile
+          překvapilo"
+    />
+    <ParallaxSection
+      side="right"
+      year="2022"
+      text="9. ledna jsme se zasnoubili v zasněženém panorama Babího lomu kousek
+          od Brna. Tehdy v Brně žádný sníh nebyl a proto při příjezdu mile
+          překvapilo"
+    />
 
     <iframe
       title="formular"

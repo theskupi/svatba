@@ -1,0 +1,28 @@
+.parallax-image.left {
+  margin-left: 25vw;
+}
+.parallax-image.right {
+  margin-right: 25vw;
+}
+
+.parallax-year {
+  font-size: 15rem;
+  font-weight: 700;
+  color: #d32030;
+  margin-left: 10vw;
+  &.right {
+    margin-left: 50vw;
+  }
+}
+
+.parallax-text {
+  background: white;
+  padding: 1rem;
+  width: 40vw;
+  margin: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  &.right {
+    margin-left: 60vw;
+  }
+}
