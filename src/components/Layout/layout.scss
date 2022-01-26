@@ -1,0 +1,25 @@
+$gray: #9d9d9d;
+$pink: #b8958b;
+$red: #8a2628;
+$mustard: #d09d28;
+$blue: #233956;
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* font: 112.5%/1.45em georgia, serif, sans-serif; */
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f2f2f2;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin-top: 0;
+}

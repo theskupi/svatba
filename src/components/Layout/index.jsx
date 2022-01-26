@@ -1,9 +1,11 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { WrapPageElement } from "../../../gatsby-browser"
 
 import Header from "../Header"
-import "./layout.css"
-import { WrapPageElement } from "../../../gatsby-browser"
+import Counter from "../Counter"
+import { Footer } from "./style"
+import "./layout.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,14 +21,17 @@ const Layout = ({ children }) => {
   return (
     <WrapPageElement>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+
+      <main>{children}</main>
+      <Footer>
+        <div>
+          Do svatby zbývá <Counter /> dní.
+        </div>
+        <p>
+          © {new Date().getFullYear()},{" "}
+          <a href="https://skupi.codes/">Vlastík Skupien</a>
+        </p>
+      </Footer>
     </WrapPageElement>
   )
 }

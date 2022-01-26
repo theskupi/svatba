@@ -1,28 +1,62 @@
-import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import { Parallax } from "react-scroll-parallax"
-// import { RightImage, Year, TextBox } from "./style"
-import "./style.scss"
+import Fade from "react-reveal/Fade"
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {
+  ParallaxContainer,
+  ParallaxImage,
+  ParallaxYear,
+  ParallaxText,
+} from "./style"
 
 function ParallaxSection({ side, year, text }) {
+  const { allFile } = useStaticQuery(graphql`
+    query {
+      allFile {
+        edges {
+          node {
+            childImageSharp {
+              gatsbyImageData
+            }
+            name
+          }
+        }
+      }
+    }
+  `)
+
+  const currentImgFile = allFile.edges.find(edge => edge.node.name === year)
+  const image = getImage(currentImgFile?.node)
   return (
-    <div>
+    <ParallaxContainer>
       <Parallax className="custom-class" y={[0, 50]} tagOuter="figure">
-        <div className={`parallax-image ${side}`}>
-          <StaticImage
-            src="../../images/zasnuby.webp"
-            alt="zasnuby"
-            placeholder="blurred"
-          ></StaticImage>
-        </div>
+        <ParallaxImage
+          // @ts-ignore
+          alignment={side}
+        >
+          <GatsbyImage image={image} alt={`year-${year}-img`} />
+        </ParallaxImage>
       </Parallax>
-      <Parallax className="custom-class" y={[-50, -3000]} tagOuter="figure">
-        <div className={`parallax-year ${side}`}>{year}</div>
+      <Parallax className="custom-class" y={[-50, -300]} tagOuter="figure">
+        <ParallaxYear
+          // @ts-ignore
+          alignment={side}
+        >
+          {year}
+        </ParallaxYear>
       </Parallax>
-      <Parallax className="custom-class" y={[100, 20]} tagOuter="figure">
-        <div className={`parallax-text ${side}`}>{text}</div>
+      <Parallax className="custom-class" y={[0, -50]} tagOuter="figure">
+        <Fade>
+          <ParallaxText
+            // @ts-ignore
+            alignment={side}
+          >
+            {text}
+          </ParallaxText>
+        </Fade>
       </Parallax>
-    </div>
+    </ParallaxContainer>
   )
 }
 

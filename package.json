@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "dasa-and-vlastik-wedding",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Our wedding website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Vlastimil Skupien",
   "dependencies": {
     "gatsby": "^4.5.3",
     "gatsby-plugin-gatsby-cloud": "^4.5.2",
@@ -20,6 +20,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-reveal": "^1.2.2",
     "react-scroll-parallax": "^2.4.3",
     "sass": "^1.49.0",
     "styled-components": "^5.3.3"
