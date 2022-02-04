@@ -10,4 +10,7 @@ export const HeaderWrapper = styled.div`
     margin-bottom: 0;
     font-size: 4rem;
   }
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+  }
 `
