@@ -4,6 +4,9 @@ export const ParallaxImage = styled.div`
   margin: ${props =>
     // @ts-ignore
     props.alignment === "right" ? "0 25vw 0 0" : "0 0 0 25vw"};
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
 `
 export const ParallaxYear = styled.div`
   font-size: 18rem;
@@ -12,6 +15,11 @@ export const ParallaxYear = styled.div`
   margin-left: ${props =>
     // @ts-ignore
     props.alignment === "right" ? "50vw" : "10vw"};
+  @media screen and (max-width: 768px) {
+    font-size: 9rem;
+    margin: 0;
+    text-align: center;
+  }
 `
 export const ParallaxText = styled.div`
   background: white;
@@ -24,8 +32,16 @@ export const ParallaxText = styled.div`
   margin-left: ${props =>
     // @ts-ignore
     props.alignment === "right" ? "50vw" : "5vw"};
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    width: calc(90vw - 3rem);
+    margin: 0 5vw;
+  }
 `
 
 export const ParallaxContainer = styled.div`
   margin: 10rem 0;
+  @media screen and (max-width: 768px) {
+    margin: 5rem 0;
+  }
 `

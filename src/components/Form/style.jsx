@@ -2,8 +2,17 @@ import styled from "styled-components"
 
 export const FormWrapper = styled.div`
   width: 60vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15rem;
+  margin: 5rem auto;
   text-align: center;
+  max-height: 700px;
+  iframe {
+    max-height: 700px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 95vw;
+    margin-bottom: 0;
+    iframe {
+      max-width: 100%;
+    }
+  }
 `
