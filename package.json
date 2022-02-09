@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Vlastimil Skupien",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "gatsby": "^4.5.3",
     "gatsby-plugin-gatsby-cloud": "^4.5.2",
     "gatsby-plugin-google-analytics": "^4.6.0",
@@ -15,6 +16,7 @@
     "gatsby-plugin-react-helmet": "^5.5.0",
     "gatsby-plugin-sass": "^5.5.0",
     "gatsby-plugin-sharp": "^4.5.2",
+    "gatsby-source-airtable": "^2.2.1",
     "gatsby-source-filesystem": "^4.5.2",
     "gatsby-transformer-sharp": "^4.5.0",
     "prop-types": "^15.8.0",

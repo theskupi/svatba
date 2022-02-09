@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Dáša & Vlastík`,
@@ -48,10 +52,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // The property ID; the tracking code won't be generated without it
         trackingId: "G-7WYTGVYZC1",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `${process.env.AIRTABLE_API}`,
+        tables: [
+          {
+            baseId: `appKy6aA4FaeDVl3g`,
+            tableName: `svatebni_formular`,
+          },
+        ],
       },
     },
   ],
