@@ -29,7 +29,7 @@ const Form = () => {
     fetch("https://api.airtable.com/v0/appKy6aA4FaeDVl3g/svatebni_formular", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.env.AIRTABLE_API}`,
+        Authorization: `Bearer ${process.env.GATSBY_AIRTABLE_API}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(fields),

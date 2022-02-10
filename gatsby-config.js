@@ -2,7 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-console.log(process.env.AIRTABLE_API)
+console.log(process.env.GATSBY_AIRTABLE_API)
 
 module.exports = {
   siteMetadata: {
@@ -61,7 +61,7 @@ module.exports = {
     {
       resolve: `gatsby-source-airtable`,
       options: {
-        apiKey: `${process.env.AIRTABLE_API}`,
+        apiKey: `${process.env.GATSBY_AIRTABLE_API}`,
         tables: [
           {
             baseId: `appKy6aA4FaeDVl3g`,
