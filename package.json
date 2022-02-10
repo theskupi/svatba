@@ -6,6 +6,7 @@
   "author": "Vlastimil Skupien",
   "dependencies": {
     "dotenv": "^16.0.0",
+    "formik": "^2.2.9",
     "gatsby": "^4.5.3",
     "gatsby-plugin-gatsby-cloud": "^4.5.2",
     "gatsby-plugin-google-analytics": "^4.6.0",
@@ -26,7 +27,8 @@
     "react-reveal": "^1.2.2",
     "react-scroll-parallax": "^2.4.3",
     "sass": "^1.49.0",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "prettier": "^2.5.1"

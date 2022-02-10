@@ -1,113 +1,56 @@
 import React, { useState } from "react"
-import { FormWrapper } from "./style"
+import FormStep from "./FormStep"
+import { FormContainer, Stepper } from "./style"
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    userName: "",
-    menu: "",
-    childPortion: false,
-    acommodation: "",
-  })
+  const [personCounter, setPersonCounter] = useState(null)
+  const [currentStep, setCurrentStep] = useState(1)
 
   const handleChange = e => {
-    const { name } = e.target
-    const value =
-      e.target.type === "checkbox" ? e.target.checked : e.target.value
-    setFormData(prevState => ({ ...prevState, [name]: value }))
-    console.log(formData)
+    console.log(e.target)
+    setPersonCounter(e.target.value)
   }
-
-  const handleSubmit = e => {
-    const fields = {
-      fields: {
-        Name: formData.userName,
-        Menu: formData.menu,
-        DetskaPorce: formData.childPortion,
-        Ubytovani: formData.acommodation,
-      },
-    }
-    fetch("https://api.airtable.com/v0/appKy6aA4FaeDVl3g/svatebni_formular", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.GATSBY_AIRTABLE_API}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(fields),
-    })
-      .then(() => alert("Form Sent!"))
-      .catch(error => alert(error))
-
-    e.preventDefault()
-  }
-
   return (
-    <FormWrapper>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="jmeno">Jméno</label>
-          <input
-            id="jmeno"
-            type="text"
-            name="userName"
-            value={formData.userName}
+    <FormContainer>
+      <h3>Svatební formulář</h3>
+      {personCounter !== (currentStep - 1).toString() ? (
+        <>
+          <p>
+            Prosím zvolte, kolik vás přijde a postupně vyplňte informace za
+            každého hosta.
+          </p>
+          <select
+            value={personCounter}
             onChange={handleChange}
-          />
-        </div>
+            name="personCounter"
+          >
+            <option value="" selected disabled hidden>
+              Počet hostů
+            </option>
+            <option value={1}>1</option>
+            <option value={2}>2</option>
+            <option value={3}>3</option>
+            <option value={4}>4</option>
+            <option value={5}>5</option>
+          </select>
 
-        <div>
-          <label htmlFor="menu1">Svíčková</label>
-          <input
-            type="radio"
-            id="menu1"
-            name="menu"
-            value="menu1"
-            checked={formData.menu === "menu1"}
-            onChange={handleChange}
-          />
-          <label htmlFor="menu2">Kuřecí</label>
-          <input
-            type="radio"
-            id="menu2"
-            name="menu"
-            value="menu2"
-            checked={formData.menu === "menu2"}
-            onChange={handleChange}
-          />
-        </div>
+          {personCounter > 1 && (
+            // @ts-ignore
+            <Stepper stepWidth={`${(currentStep / personCounter) * 100}%`} />
+          )}
 
-        <div>
-          <label htmlFor="detskaPorce">Dětská porce</label>
-          <input
-            id="detskaPorce"
-            type="checkbox"
-            name="childPortion"
-            checked={formData.childPortion}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="ubytovaniAno">Ano</label>
-          <input
-            id="ubytovaniAno"
-            type="radio"
-            name="acommodation"
-            value="ano"
-            checked={formData.acommodation === "ano"}
-            onChange={handleChange}
-          />
-          <label htmlFor="ubytovaniNe">Ne</label>
-          <input
-            id="ubytovaniNe"
-            type="radio"
-            name="acommodation"
-            value="ne"
-            checked={formData.acommodation === "ne"}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Odeslat</button>
-      </form>
-    </FormWrapper>
+          {personCounter && (
+            <FormStep
+              persons={personCounter}
+              currentStep={currentStep}
+              setCurrentStep={setCurrentStep}
+            />
+          )}
+        </>
+      ) : (
+        <p>Děkujeme za vaše odpovědi 🙂</p>
+      )}
+    </FormContainer>
   )
 }
 

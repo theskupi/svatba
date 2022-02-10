@@ -24,12 +24,12 @@ const IndexPage = () => (
     <ParallaxSection
       side="left"
       year="2019"
-      text="Jak jsme se to naučili během Vlastíkova Erasmu, cestování se stalo naší nejoblíbenější kratochvílí. Foto z rakouských Alp ⛰"
+      text="Ten pravý dospělácký život je tady. První práce na plný úvazek, péče o domov a tak dále. Čas na nějakou tu dovolenou se ale vždycky najde.  Foto ze Sevilly 🇪🇸"
     />
     <ParallaxSection
       side="right"
       year="2020"
-      text="Pandemie Covidu tvrdě zasáhla Česko, objevujeme tak alespoň krásy Jižní Moravy. Vlastík se rozhodl, že nastal ten správný čas poohlédnout se po prstýnku. Foto z NP Podyjí 👰🏻‍♀️"
+      text="Pandemie Covidu zasáhla Česko, objevujeme tak alespoň krásy Jižní Moravy. Vlastík se rozhodl, že nastal ten správný čas poohlédnout se po prstýnku. Foto z Národního parku Podyjí 👰🏻‍♀️"
     />
     <ParallaxSection
       side="left"
@@ -39,8 +39,8 @@ const IndexPage = () => (
 
     <TextBox>
       <p>
-        Snad vás náš příběh alespoň trochu pobavil. Pokračujte prosím dále,
-        potřebuje od vás zjistit pár doplňujících informací.
+        Snad vás náš příběh alespoň trochu zaujal. Pokračujte prosím dále,
+        potřebujeme od vás zjistit pár doplňujících informací.
       </p>
     </TextBox>
 
@@ -48,8 +48,8 @@ const IndexPage = () => (
       <p>
         Je nám jasné, že ne všichni vyrostli na svíčkové jako Vlastík a nemusí
         tak jeho vášeň pro svíčkovou sdílet. Proto nám prosím dejte vědět, co
-        byste si nejraději dali. Volit můžete z této dvojice:{" "}
-      </p>{" "}
+        byste si nejraději dali. Volit můžete z této dvojice:
+      </p>
       <ul>
         <li>Hovězí svíčková na smetaně s variací knedlíků</li>
         <li>
@@ -65,8 +65,7 @@ const IndexPage = () => (
       <p>
         Bude to skvělé, když s námi vydržíte slavit až do rána, protože jsme vám
         všem zajistili v areálu také <strong>ubytování</strong>. Přece jen, jak
-        už adresa tohoto webu napovídá, věříme, že to bude pořádná párty 🥳{" "}
-        <br /> Pokud o přespání nestojíte, dejte nám prosím co nejdřívě vědět.
+        už adresa tohoto webu napovídá, věříme, že to bude pořádná párty 🥳
       </p>
       <p>
         A jestli ještě váháte, co na sebe, mrkněte na naše barvy a můžete zkusit
@@ -76,7 +75,9 @@ const IndexPage = () => (
 
     <Colors />
 
-    <TextBox heading="Těšíme se na vás!">Dáša a Vlastík</TextBox>
+    <TextBox heading="Těšíme se na vás!">
+      ❤️ <br /> Dáša a Vlastík
+    </TextBox>
   </Layout>
 )
 

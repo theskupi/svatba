@@ -13,7 +13,6 @@ export const TextBoxWrapper = styled.div`
   }
   ul {
     text-align: left;
-    font-style: italic;
   }
   @media screen and (max-width: 768px) {
     width: 90vw;
