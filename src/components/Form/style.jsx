@@ -7,6 +7,7 @@ export const FormContainer = styled.div`
   background: white;
   border-radius: 25px;
   padding: 2rem;
+  max-width: 100%;
   h3 {
     margin-top: 0;
   }
@@ -18,8 +19,9 @@ export const FormContainer = styled.div`
     padding: 0.25rem;
   }
   @media screen and (max-width: 768px) {
-    width: 95vw;
-    margin-bottom: 0;
+    width:80vw;
+    margin: 5rem auto 0;
+    padding: 1rem;
   }
 `
 
@@ -45,6 +47,9 @@ export const FormWrapper = styled.div`
     &:hover {
       background-color: #32517a;
     }
+  }
+  @media screen and (max-width: 768px) {
+   font-size: .9rem;
   }
 `
 
@@ -76,6 +81,7 @@ export const Flex = styled.div`
     props.justify};
   & > div:last-of-type {
     width: 40%;
+    margin-left: 5%;
   }
 `
 
