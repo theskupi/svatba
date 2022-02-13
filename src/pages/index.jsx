@@ -51,10 +51,14 @@ const IndexPage = () => (
         byste si nejraději dali. Volit můžete z této dvojice:
       </p>
       <ul>
-        <li>Hovězí svíčková na smetaně s variací knedlíků</li>
         <li>
-          Plněné kuřecí prsíčko s bramborovo-celerovým pyré a pěnou z červené
-          řepy
+          <i>Hovězí svíčková na smetaně s variací knedlíků</i>
+        </li>
+        <li>
+          <i>
+            Plněné kuřecí prsíčko s bramborovo-celerovým pyré a pěnou z červené
+            řepy
+          </i>
         </li>
       </ul>
     </TextBox>
@@ -75,9 +79,7 @@ const IndexPage = () => (
 
     <Colors />
 
-    <TextBox heading="Těšíme se na vás!">
-      ❤️ <br /> Dáša a Vlastík
-    </TextBox>
+    <TextBox heading="Těšíme se na vás!">Dáša ❤️ Vlastík</TextBox>
   </Layout>
 )
 

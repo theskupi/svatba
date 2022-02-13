@@ -4,8 +4,7 @@ import { WrapPageElement } from "../../../gatsby-browser"
 
 import Header from "../Header"
 import Counter from "../Counter"
-import { Footer } from "./style"
-import "./layout.scss"
+import { GlobalStyle, Footer } from "./style"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,6 +19,8 @@ const Layout = ({ children }) => {
 
   return (
     <WrapPageElement>
+      <GlobalStyle
+      />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
       <main>{children}</main>
