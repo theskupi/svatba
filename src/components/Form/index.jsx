@@ -3,11 +3,10 @@ import FormStep from "./FormStep"
 import { FormContainer, Stepper } from "./style"
 
 const Form = () => {
-  const [personCounter, setPersonCounter] = useState(null)
+  const [personCounter, setPersonCounter] = useState(undefined)
   const [currentStep, setCurrentStep] = useState(1)
 
   const handleChange = e => {
-    console.log(e.target)
     setPersonCounter(e.target.value)
   }
   return (
@@ -23,8 +22,9 @@ const Form = () => {
             value={personCounter}
             onChange={handleChange}
             name="personCounter"
+            defaultValue={"Počet hostů"}
           >
-            <option value="" selected disabled hidden>
+            <option value="Počet hostů" disabled hidden>
               Počet hostů
             </option>
             <option value={1}>1</option>

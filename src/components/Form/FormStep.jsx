@@ -24,9 +24,7 @@ const FormStep = ({ persons, currentStep, setCurrentStep }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(fields),
-    })
-      .then(() => alert("Form Sent!"))
-      .catch(error => alert(error))
+    }).catch(error => alert(error))
 
     handleStepChange()
   }
