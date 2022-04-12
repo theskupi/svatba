@@ -19,7 +19,7 @@ export const FormContainer = styled.div`
     padding: 0.25rem;
   }
   @media screen and (max-width: 768px) {
-    width:80vw;
+    width: 80vw;
     margin: 5rem auto 0;
     padding: 1rem;
   }
@@ -49,7 +49,7 @@ export const FormWrapper = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-   font-size: .9rem;
+    font-size: 0.9rem;
   }
 `
 

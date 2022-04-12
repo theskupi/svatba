@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { WrapPageElement } from "../../../gatsby-browser"
 
 import Header from "../Header"
 import Counter from "../Counter"
@@ -18,9 +17,8 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <WrapPageElement>
-      <GlobalStyle
-      />
+    <>
+      <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
       <main>{children}</main>
@@ -33,7 +31,7 @@ const Layout = ({ children }) => {
           <a href="https://skupi.codes/">Vlastík Skupien</a>
         </p>
       </Footer>
-    </WrapPageElement>
+    </>
   )
 }
 
