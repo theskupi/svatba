@@ -14,6 +14,9 @@ export const TextBoxWrapper = styled.div`
   ul {
     text-align: left;
   }
+  margin-bottom: ${props =>
+    // @ts-ignore
+    props.marginBottom};
   @media screen and (max-width: 768px) {
     width: 90vw;
   }

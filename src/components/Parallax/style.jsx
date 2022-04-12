@@ -21,6 +21,10 @@ export const ParallaxYear = styled.div`
     text-align: center;
   }
 `
+export const ParallaxYearCentered = styled(ParallaxYear)`
+  margin: 0 auto;
+  text-align: center;
+`
 export const ParallaxText = styled.div`
   background: white;
   padding: 1.5rem;
@@ -36,6 +40,15 @@ export const ParallaxText = styled.div`
     font-size: 1rem;
     width: calc(90vw - 3rem);
     margin: 0 5vw;
+  }
+`
+
+export const ParallaxTextCentered = styled(ParallaxText)`
+  margin: -13rem auto 0;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    margin-top: -6.8rem;
+    padding: 0.8rem;
   }
 `
 

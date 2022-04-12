@@ -62,7 +62,7 @@ const FormStep = ({ persons, currentStep, setCurrentStep }) => {
               // @ts-ignore
               justify="space-between"
             >
-              <div>
+              {/* <div>
                 <p>
                   <strong>Druh jídla</strong>
                 </p>
@@ -84,40 +84,45 @@ const FormStep = ({ persons, currentStep, setCurrentStep }) => {
                   <label htmlFor="detskaPorce">Dětská porce</label>
                 </div>
                 <ErrorMessage component={CustomErrorMsg} name="menu" />
-              </div>
+              </div> */}
 
               <div>
                 <p>
                   <strong>Ubytování</strong>
                 </p>
 
-                <div>
-                  <Field
-                    id="ubytovaniAno"
-                    type="radio"
-                    name="acommodation"
-                    value="ano"
-                  />
-                  <label htmlFor="ubytovaniAno">Ano</label>
-                </div>
-                <div>
-                  <Field
-                    id="ubytovaniNe"
-                    type="radio"
-                    name="acommodation"
-                    value="ne"
-                  />
-                  <label htmlFor="ubytovaniNe">Ne</label>
-                </div>
+                <Flex>
+                  <div>
+                    <Field
+                      id="ubytovaniAno"
+                      type="radio"
+                      name="acommodation"
+                      value="ano"
+                    />
+                    <label htmlFor="ubytovaniAno">Ano</label>
+                  </div>
+                  <div>
+                    <Field
+                      id="ubytovaniNe"
+                      type="radio"
+                      name="acommodation"
+                      value="ne"
+                    />
+                    <label htmlFor="ubytovaniNe">Ne</label>
+                  </div>
+                </Flex>
+
                 <ErrorMessage component={CustomErrorMsg} name="acommodation" />
               </div>
-            </Flex>
 
-            <button type="submit">
-              {persons === "1" || persons === currentStep.toString()
-                ? "Odeslat"
-                : "Další"}
-            </button>
+              <div>
+                <button type="submit">
+                  {persons === "1" || persons === currentStep.toString()
+                    ? "Odeslat"
+                    : "Další"}
+                </button>
+              </div>
+            </Flex>
           </Form>
         )}
       </Formik>

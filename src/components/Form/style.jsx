@@ -79,9 +79,18 @@ export const Flex = styled.div`
   justify-content: ${props =>
     // @ts-ignore
     props.justify};
+  align-items: flex-end;
+  & > div {
+    width: 50%;
+  }
   & > div:last-of-type {
-    width: 40%;
     margin-left: 5%;
+  }
+  @media screen and (max-width: 768px) {
+    & > div:last-of-type {
+      margin-left: 5%;
+      /* width: 40%; */
+    }
   }
 `
 
@@ -95,6 +104,7 @@ export const InlineTextInput = styled.div`
     display: block;
   }
   input {
+    box-sizing: border-box;
     width: 100%;
     margin-top: 0.5rem;
   }
