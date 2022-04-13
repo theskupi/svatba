@@ -21,7 +21,7 @@ const IndexPage = () => (
 			<ParallaxSection
 				side="right"
 				year="2018"
-				text="Po návratu ze Španělska zjišťujeme, že Brno je od Ostravy poměrně z ruky a domlouváme se na společném bydlení. Na konci léta už Vlastík bydlí v Brně. Foto z našeho prvního obědu 🍕"
+				text="Po návratu ze Španělska zjišťujeme, že Brno je od Ostravy poměrně z ruky a domlouváme se na společném bydlení. Na konci léta už Vlastík bydlí v Brně. Foto z našeho prvního oběda 🍕"
 			/>
 			<ParallaxSection
 				side="left"
@@ -39,37 +39,31 @@ const IndexPage = () => (
 				text="Výroba prstenu se trochu protáhla a kvůli neustálým koronavirovým restrikcím je výběr vhodného místa omezen opět na okolí Brna. Řekla ANO! - 9. ledna jsme se zasnoubili v zasněženém panorama Babího lomu 💍"
 			/>
 			<TextBox margin={"20rem"}>
-				<ParallaxYearCentered>2022?</ParallaxYearCentered>
+				<ParallaxYearCentered>2022</ParallaxYearCentered>
 				<ParallaxTextCentered>Uvidíte! Sami budete u toho.</ParallaxTextCentered>
 			</TextBox>
-			<TextBox heading={"Oganizační okénko"}>
+			<TextBox heading={"Organizační okénko"}>
 				<p>
 					Obřad je naplánován na <strong>11 hodin</strong>. Proto vás prosíme,
 					abyste dorazili nejpozději o půl 11, ať máte čas se porozhlédnout a
-					občerstvit. 🍸
-				</p>
-				<p>
-					Žádný seznam dárků bohužel neexistuje. Jak jste se nahoře mohli dočíst,
-					společnou domácnost obýváme už nějakou dobu a nic nám do ní nechybí.
-					Pokud byste nechtěli přijít s prázdnou, budeme moc rádi, když nám
-					přispějete na svatební cestu. 🏝️
+					občerstvit 🥂
 				</p>
 			</TextBox>
 			<TextBox heading={"Bude párty"}>
 				<p>
-					Bude to skvělé, když s námi vydržíte slavit až do rána, protože jsme vám
-					všem zajistili v areálu také <strong>ubytování</strong>. Přece jen, jak
-					už adresa tohoto webu napovídá, věříme, že to bude pořádná párty 🥳
-				</p>
-				<p>
-					Níže nám prosím vyplňte formulář, ať víme, s kým na ubytování počítat a
-					můžeme tak předem naplánovat osazenstvo pokojů.
+					Bude skvělé, když s námi vydržíte slavit až do rána, a proto jsme vám
+					všem zajistili v areálu také <strong>ubytování</strong>. 
+					<br></br>
+					Přece jen, jak
+					už adresa tohoto webu napovídá, věříme, že to bude pořádná párty 🥳 
+					<br></br>
+					Níže nám prosím vyplňte formulář, ať víme, s kým na ubytování můžeme počítat.
 				</p>
 			</TextBox>
 			<Form />
 			<TextBox>
 				<p>
-					A jestli ještě váháte, co na sebe, mrkněte na naše svatební barvy a
+					A jestli ještě váháte co na sebe, mrkněte na naše svatební barvy a
 					můžete zkusit vybrat něco podobného.
 				</p>
 			</TextBox>

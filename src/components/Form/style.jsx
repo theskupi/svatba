@@ -80,9 +80,6 @@ export const Flex = styled.div`
     // @ts-ignore
     props.justify};
   align-items: flex-end;
-  & > div {
-    width: 50%;
-  }
   & > div:last-of-type {
     margin-left: 5%;
   }

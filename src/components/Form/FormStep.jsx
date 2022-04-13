@@ -84,12 +84,12 @@ const FormStep = ({ persons, currentStep, setCurrentStep }) => {
                 <ErrorMessage component={CustomErrorMsg} name="menu" />
               </div> */}
 
-              <div>
+              <div style={{width: "50%"}}>
                 <p>
                   <strong>Ubytování</strong>
                 </p>
 
-                <Flex>
+                <Flex justify="flex-start">
                   <div>
                     <Field
                       id="ubytovaniAno"
@@ -113,7 +113,7 @@ const FormStep = ({ persons, currentStep, setCurrentStep }) => {
                 <ErrorMessage component={CustomErrorMsg} name="acommodation" />
               </div>
 
-              <div>
+              <div style={{width: "50%"}}>
                 <button type="submit">
                   {persons === "1" || persons === currentStep.toString()
                     ? "Odeslat"
