@@ -12,8 +12,8 @@ const FormStep = ({ persons, currentStep, setCurrentStep }) => {
     const fields = {
       fields: {
         Name: values.userName,
-        Menu: values.menu,
-        DetskaPorce: values.childPortion,
+        // Menu: values.menu,
+        // DetskaPorce: values.childPortion,
         Ubytovani: values.acommodation,
       },
     }
@@ -34,8 +34,8 @@ const FormStep = ({ persons, currentStep, setCurrentStep }) => {
       <Formik
         initialValues={{
           userName: "",
-          menu: "",
-          childPortion: false,
+          // menu: "",
+          // childPortion: false,
           acommodation: "",
         }}
         onSubmit={(values, { resetForm }) => {
